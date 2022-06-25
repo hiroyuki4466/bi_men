@@ -1,0 +1,38 @@
+<div class = "home_page">
+  <div class = "home_table">
+    <div class = "home_message">
+      <%= image_tag "https://icooon-mono.com/i/icon_14142/icon_141421_64.png", class: "home_table_logo" %>イケ麺を探す
+    </div>
+    <div>
+      <%= link_to "→条件で探す", maps_path, class: "home_sign_in_link" %>
+    </div>
+    <div>
+      <%= link_to "→地図から探す", maps_path, class: "home_sign_up_link" %>
+    </div>
+  </div>
+  <% if user_signed_in? %>
+    <div class = "home_table">
+      <div class = "home_message">
+        <%= image_tag "https://icooon-mono.com/i/icon_11122/icon_111221_64.png", class: "home_table_logo" %>ラー活を記録する
+      </div>
+      <div>
+        <%= link_to "→訪麺店舗登録", new_post_path, class: "home_post_register_link" %>
+      </div>
+      <div>
+        <%= link_to "→訪麺店舗リスト", posts_path, class: "home_post_index_link" %>
+      </div>
+    </div>
+  <% else %>
+    <div class = "home_table">
+      <div class = "home_message">
+        <%= image_tag "https://icooon-mono.com/i/icon_11122/icon_111221_64.png", class: "home_table_logo" %>ラー活を記録する
+      </div>
+      <div>
+        <%= link_to "→ログイン", new_user_session_path, class: "home_sign_in_link" %>
+      </div>
+      <div>
+        <%= link_to "→麺バー登録", new_user_registration_path, class: "home_sign_up_link" %>
+      </div>
+    </div>
+  <% end %>
+</div>

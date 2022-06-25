@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ramen_image: MyString
+  shop_name: MyString
+  address: MyString
+  shop_memo: MyString
+  shop_score: 1
+  visited_date: 2022-06-22
+  post_id: 1
+  user_id: 1
+
+two:
+  ramen_image: MyString
+  shop_name: MyString
+  address: MyString
+  shop_memo: MyString
+  shop_score: 1
+  visited_date: 2022-06-22
+  post_id: 1
+  user_id: 1
