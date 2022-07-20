@@ -6,6 +6,7 @@
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.4.3",
+    "@vue/babel-plugin-jsx": "^1.1.1",
     "turbolinks": "^5.2.0",
     "vue-loader": "^17.0.0",
     "webpack": "^4.46.0",
