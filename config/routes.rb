@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'attension/privacy_policy'
+  get 'attension/terms'
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',
     :sessions => 'users/sessions'   
@@ -12,7 +14,7 @@ Rails.application.routes.draw do
   end
 
   resources :maps, only: [:index]
-  resources :posts, only: [:index, :create, :new, :edit, :update, :destroy]
+  resources :posts, only: [:index, :create, :new, :show, :edit, :update, :destroy]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :homes
     root to: "homes#index"
