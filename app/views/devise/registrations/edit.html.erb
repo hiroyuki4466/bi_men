@@ -1,37 +1,35 @@
 <div class = "account_edit_page">
-  <h2 class = "account_edit_title">アカウント編集</h2>
+  <div class = "account_edit_title">
+    <%= image_tag "https://icooon-mono.com/i/icon_12122/icon_121221_64.png", class: "account_edit_logo" %>
+    <h2>アカウント情報編集</h2>
+  </div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="account_edit_field">
-    <%= f.label :email, "メールアドレス" %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレスを入力してください" %>
-  </div>
+  <ul class="account_edit_field">
+    <li>
+      <%= f.label :email, "メールアドレス", class: "account_edit_label" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレスを入力してください" %>
+    </li>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <% end %>
 
-  <div class="account_edit_field">
-    <%= f.label :password, "変更後パスワード（変更する場合のみ入力）" %>
-    <%= f.password_field :password, autocomplete: "new_password" %>
-  </div>
-
-  <div class="account_edit_field">
-    <%= f.label :confirm_password, "パスワード確認用（変更する場合のみ入力)" %>
-    <%= f.password_field :confirm_password, autocomplete: "new_password" %>
-  </div>
-    
-  <div class="account_edit_field">
-    <%= f.label :current_password, "現在のパスワード" %>
-    <%= f.password_field :current_password, autocomplete: "current-password", placeholder: "現在のパスワードを入力" %>
-  </div>
-
-  <div class="account_edit_field">
-    <%= f.label :user_image, "お気に入りの一杯" %>
-    <%= f.file_field :user_image %>
-  </div>
+    <li>
+      <%= f.label :password, "変更後パスワード", class: "account_edit_label" %>
+      <%= f.password_field :password, autocomplete: "new_password" %>
+    </li>
+    <li>
+      <%= f.label :confirm_password, "パスワード確認用", class: "account_edit_label" %>
+      <%= f.password_field :confirm_password, autocomplete: "new_password" %>
+    </li>
+    <li>
+      <%= f.label :current_password, "現在のパスワード", class: "account_edit_label" %>
+      <%= f.password_field :current_password, autocomplete: "current-password", placeholder: "現在のパスワードを入力" %>
+    </li>
+  </ul>
 
   <div class = "account_edit_actions">
     <%= f.submit "更新", class: "account_edit_button" %>
