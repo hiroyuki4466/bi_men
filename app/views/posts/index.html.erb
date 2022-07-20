@@ -2,7 +2,6 @@
   <div class = "post_index_title">
     <%= image_tag "https://icooon-mono.com/i/icon_15519/icon_155191_64.png", class: "post_index_logo" %>
     <h2>訪麺店舗リスト</h2>
-    <%= image_tag "https://icooon-mono.com/i/icon_15519/icon_155191_64.png", class: "post_index_logo" %>
   </div>
 
   <table class = "post_index_table">
@@ -24,7 +23,7 @@
         <td><%= link_to post.shop_name, post_path(post), class: "post_index_shop_name" %></td>
         <td><%= post.address %></td>
         <td><%= post.visited_date.to_s %></td>
-        <td class ="post_index_tbody_td"><%= post.shop_score %> 点</td>
+        <td class ="post_index_shop_score"><%= post.shop_score %> 点</td>
         <td><%= link_to "店舗情報編集", edit_post_path(post), class: "post_index_edit_link" %></td>
       </tr>
     <% end %>
