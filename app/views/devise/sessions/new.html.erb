@@ -1,17 +1,21 @@
 <div class ="sign_in_page">
-  <h2 class = "sign_in_title">ログイン</h2>
+  <div class = "sign_in_title">
+    <%= image_tag "https://icooon-mono.com/i/icon_14679/icon_146791_64.png", class: "sign_in_logo" %>
+    <h2>ログイン</h2>
+  </div>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-  <div class="sign_in_field">
-    <%= f.label :メールアドレス %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="sign_in_field">
-    <%= f.label :パスワード %>
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+  <ul class="sign_in_field">
+    <li>
+      <%= f.label :メールアドレス, class: "sign_in_label" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </li>
+    <li>
+      <%= f.label :パスワード, class: "sign_in_label" %>
+      <%= f.password_field :password, autocomplete: "current-password" %>
+    </li>
+  </ul>
 
   <div class="sign_in_actions">
     <%= f.submit "ログイン", class: "sign_in_button" %>
