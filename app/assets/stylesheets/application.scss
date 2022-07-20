@@ -16,15 +16,16 @@
                                                                                                                                                
  @import "bootstrap";
 
+/*PC*/
+ @media screen and (min-width: 1025px) {
 /*ヘッダー・フッター*/
-header a, footer li {
-  font-family: 'klee',sans-serif;
-}
-
 .header_title {
   text-decoration: none;
-  font-size: 30px;
+  font-family: “STKaiti”, “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, serif;
+  font-weight: bold;
+  font-size: 40px;
   color: white;
+  margin-left: 10px;
 }
 
 .header_logo {
@@ -45,7 +46,7 @@ header a, footer li {
 }
 
 .header_menu_link:hover {
-  color: #FFFF99;
+  color: #CCFFFF;
 }
 
 .header_menu_logo {
@@ -53,13 +54,39 @@ header a, footer li {
   height: 80%;
 }
 
-.navbar-brand {
+.header_sp_right_nav_container {
+  display: none;
+}
+
+#footer_nav {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  margin: 20px auto;
+}
+
+#footer_nav li {
   font-size: small;
+  font-family: 'klee',sans-serif;
+  text-decoration: none;
+  color: #000000;
+}
+
+/*プラポリ・利用規約*/
+.pri_pol_page, .terms_page {
+  margin: 40px 50px;
+  border: 1px solid #DDDDDD;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.over {
+  text-align: right;
 }
 
 /*ホーム画面*/
 .home_page {
-  background-image: url("https://free-materials.com/adm/wp-content/uploads/2019/10/adpDSC_9750-1024x683.jpg");
+  background-image: url("https://images.unsplash.com/photo-1614563637806-1d0e645e0940?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1073&q=80");
   background-size: cover;
   background-repeat: no-repeat;
   height: 600px;
@@ -70,8 +97,8 @@ header a, footer li {
   border: 1px solid black;
   border-radius: 10px;
   background-color: #EEEEEE;
-  width: 30%;
-  height: 25%;
+  width: 25%;
+  height: 30%;
   padding: 10px 20px;
   text-align: center;
   margin: auto;
@@ -82,7 +109,7 @@ header a, footer li {
   font-size: x-large;
 }
 
-.home_sign_in_link, .home_sign_up_link, .home_post_register_link, .home_post_index_link {
+.home_table_link {
   font-family: 'TsukuARdGothic-Regular',sans-serif;
   font-size: large;
   text-decoration: none;
@@ -90,31 +117,54 @@ header a, footer li {
   margin: auto;
 }
 
-.home_sign_in_link:hover, .home_sign_up_link:hover, .home_post_register_link:hover, .home_post_index_link:hover {
+.home_table_search_link {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  font-size: large;
+  text-decoration: none;
+  color: #FF69A3;
+  margin: auto;
+  position: relative;
+  top: 15px;
+}
+
+.home_table_link:hover, .home_table_search_link:hover {
   color: #FFCC99;
 }
 
 /*新規登録・ログインページ*/
-.sign_up_page, .sign_in_page {
+.sign_up_page, .sign_in_page, .account_edit_page {
   margin-top: 40px;
   margin-bottom: 40px;
 }
 
-.sign_up_title, .sign_in_title {
+.sign_up_title, .sign_in_title, .account_edit_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: 'klee',sans-serif;
   text-align: center;
 }
 
-.sign_up_field, .sign_in_field {
+.sign_up_field li, .sign_in_field li, .account_edit_field li {
   font-family: 'TsukuARdGothic-Regular',sans-serif;
-  text-align: center;
+  list-style: none;
   margin-top: 20px;
 }
 
-.sign_up_actions, .sign_in_actions {
+.sign_in_label, .sign_up_label, .account_edit_label {
+  width: 250px;
+  float: left;
+}
+
+.sign_in_field, .sign_up_field, .account_edit_field {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.sign_up_actions, .sign_in_actions, .account_edit_actions {
   text-align: center;
   margin-top: 20px;
-}
+} 
 
 .sign_up_button, .sign_in_button {
   font-family: 'TsukuARdGothic-Regular',sans-serif;
@@ -122,7 +172,7 @@ header a, footer li {
   border: 1px solid black;
   border-radius: 10px;
   padding: 2px 15px;
-  background-color: #00BFFF;
+  background-color: #6699FF;
   color: white;
   width: 330px;
 }
@@ -137,40 +187,24 @@ header a, footer li {
   text-decoration: none;
 }
 
+.sign_in_link {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
 .sign_up_link {
   padding-left: 125px;
   padding-right: 125px;
 }
 
 /*アカウント編集ページ*/
-.account_edit_page {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-.account_edit_title {
-  font-family: 'klee',sans-serif;
-  text-align: center;
-}
-
-.account_edit_field {
-  font-family: 'TsukuARdGothic-Regular',sans-serif;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.account_edit_actions {
-  text-align: center;
-  margin-top: 20px;
-}
-
 .account_edit_button {
   font-family: 'TsukuARdGothic-Regular',sans-serif;
   font-size: medium;
   border: 1px solid black;
   border-radius: 10px;
   padding: 2px 10px;
-  background-color: #00BFFF;
+  background-color: #6699FF;
   color: white;
   width: 290px;
 }
@@ -192,7 +226,7 @@ header a, footer li {
 }
 
 .post_index_title {
-  font-family: 'Hannotate TC',sans-serif;
+  font-family: 'klee',sans-serif;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -202,7 +236,6 @@ header a, footer li {
   border-spacing: 0;
   width: 90%;
   margin: auto;
-  
 }
 
 thead tr, thead th {
@@ -225,7 +258,7 @@ tbody tr, tbody td {
   font-size: large;
 }
 
-.post_index_tbody_td {
+.post_index_shop_score {
   color: #FF3333;
   font-size: x-large;
 }
@@ -242,7 +275,7 @@ tbody tr, tbody td {
 }
 
 .post_index_edit_link {
-  color: #00BFFF;
+  color: #6699FF;
   font-size: medium;
 }
 
@@ -261,33 +294,33 @@ tbody tr, tbody td {
 
 .post_register_title h2, .post_index_title h2, .post_edit_title h2 {
   margin-left: 10px;
-  margin-right: 10px;
 }
 
-.post_register_field, .post_edit_field {
+.post_register_field li, .post_edit_field li {
   font-family: 'TsukuARdGothic-Regular',sans-serif;
-  text-align: center;
+  list-style: none;
   margin-top: 20px;
-}
-
-.post_register_memo_field, .post_edit_memo_field {
-  font-family: 'TsukuARdGothic-Regular',sans-serif;
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .post_register_label, .post_edit_label {
-  margin-right: 10px;
+  width: 250px;
+  float: left;
 }
 
-.post_register_form, .post_edit_form {
-  width: 200px;
+.post_register_field, .post_edit_field {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.post_register_file_field, .post_edit_file_field {
+  display: flex;
+}
+
+.post_register_image, .post_edit_image {
+  font-size: small;
 }
 
 .post_register_area, .post_edit_area {
-  width: 250px;
   height: 150px;
 }
 
@@ -302,7 +335,7 @@ tbody tr, tbody td {
   border: 1px solid black;
   border-radius: 10px;
   padding: 2px 10px;
-  background-color: #00BFFF;
+  background-color: #6699FF;
   color: white;
   width: 290px;
 }
@@ -318,34 +351,35 @@ tbody tr, tbody td {
 }
 
 .post_show_page {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 40px 20px;
   display: flex;
 }
 
 .post_show_image {
-  width: 50%;
-  margin-left: 15px;
+  width: 80%;
+  height: 100%;
 }
 
 .post_show_nav {
+  width: 100%;
   border: 1px solid #EEEEEE;
   text-align: center;
   margin: auto;
+  margin-right: 50px;
   padding: 40px 100px;
 }
 
 .post_show_shop_name {
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .post_show_shop_score {
-  font-size: 20px;
+  font-size: 30px;
   color: #FF3333;
 }
 
 .post_show_nav_list {
-  margin-bottom: 20px;
+  margin-top: 30px;
   font-family: 'TsukuARdGothic-Regular',sans-serif;
 }
 
@@ -363,4 +397,1096 @@ tbody tr, tbody td {
   color: black;
   text-decoration: none;
   padding: 5px 72px;
+}
+
+/*家系地図検索ページ*/
+.map_index_page {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.map_index_logo {
+  width: 5%;
+  height: 5%;
+}
+
+.map_index_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'klee',sans-serif;
+}
+
+.map_index_title h3 {
+  margin-left: 10px;
+}
+
+.map_index_form {
+  margin-left: 30px;
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+}
+
+.map_index_form input {
+  border-radius: 10px;
+  border-color: #DDDDDD;
+}
+
+#addressInput {
+  width: 250px;
+}
+
+.map_index_range {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#radiusInput {
+  margin-bottom: 15px;
+}
+
+#mapArea {
+  width: 90%;
+  height: 500px;
+  margin: auto;
+}
+
+#results {
+  width: 50%;
+  height: 100px;
+  border: 1px dotted;
+  padding: 10px;
+  overflow-y: scroll;
+  background: #FFFFCC;
+  margin: auto;
+}
+}
+
+/*タブレット*/
+@media screen and (min-width:768px) and ( max-width:1024px) {
+  /*ヘッダー・フッター*/
+.header_title {
+  text-decoration: none;
+  font-family: “STKaiti”, “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, serif;
+  font-weight: bold;
+  font-size: 40px;
+  color: white;
+  margin-left: 10px;
+}
+
+.header_logo {
+  margin-left: 20px;
+}
+
+.header_title:hover {
+  color: #FFFFEE;
+}
+
+#header_right_nav {
+  max-width: 70%;
+}
+
+.header_menu_link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.header_menu_link:hover {
+  color: #CCFFFF;
+}
+
+.header_menu_logo {
+  width: 10%;
+  height: 40%;
+}
+
+.header_sp_right_nav_container {
+  display: none;
+}
+
+footer nav {
+  height: 120px;
+}
+
+footer nav ul {
+  display: flex;
+}
+
+#footer_nav li {
+  font-size: small;
+  font-family: 'klee',sans-serif;
+  text-decoration: none;
+  margin-left: 10px;
+  color: #000000;
+}
+
+/*プラポリ・利用規約*/
+.pri_pol_page, .terms_page {
+  margin: 40px 50px;
+  border: 1px solid #DDDDDD;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.over {
+  text-align: right;
+}
+
+/*ホーム画面*/
+.home_page {
+  background-image: url("https://images.unsplash.com/photo-1614563637806-1d0e645e0940?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1073&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 600px;
+  display: flex;
+}
+
+.home_table {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #EEEEEE;
+  width: 40%;
+  height: 150px;
+  padding: 10px 20px;
+  text-align: center;
+  margin: auto;
+}
+
+.home_message {
+  font-family: 'klee',sans-serif;
+  font-size: x-large;
+}
+
+.home_table_link {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  font-size: large;
+  text-decoration: none;
+  color: #FF69A3;
+  margin: auto;
+}
+
+.home_table_search_link {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  font-size: large;
+  text-decoration: none;
+  color: #FF69A3;
+  margin: auto;
+  position: relative;
+  top: 15px;
+}
+
+.home_table_link:hover, .home_table_search_link:hover {
+  color: #FFCC99;
+}
+
+/*新規登録・ログインページ*/
+.sign_up_page, .sign_in_page, .account_edit_page {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.sign_in_logo, .sign_up_logo, .account_edit_logo {
+  width: 5%;
+  height: 5%;
+}
+
+.sign_up_title, .sign_in_title, .account_edit_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'klee',sans-serif;
+  text-align: center;
+}
+
+.sign_up_field li, .sign_in_field li, .account_edit_field li {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  list-style: none;
+  margin-top: 20px;
+}
+
+.sign_in_label, .sign_up_label, .account_edit_label {
+  width:200px;
+  float: left;
+}
+
+.sign_in_field, .sign_up_field, .account_edit_field {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.sign_in_field li {
+  display: flex;
+}
+
+.sign_up_actions, .sign_in_actions, .account_edit_actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.sign_up_button, .sign_in_button {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  font-size: medium;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 2px 15px;
+  background-color: #6699FF;
+  color: white;
+  width: 330px;
+}
+
+.sign_in_link, .sign_up_link {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #EEEEEE;
+  color: black;
+  text-decoration: none;
+}
+
+.sign_in_link {
+  padding: 5px 40px;
+}
+
+.sign_up_link {
+  padding: 5px 125px;
+}
+
+/*アカウント編集ページ*/
+.account_edit_button {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  font-size: medium;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 2px 10px;
+  background-color: #6699FF;
+  color: white;
+  width: 290px;
+}
+
+.back_button {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #EEEEEE;
+  color: black;
+  text-decoration: none;
+  padding: 5px 130px;
+}
+
+/*ポストページ*/
+.post_index_page, .post_register_page, .post_edit_page {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.post_index_title {
+  font-family: 'klee',sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.post_index_table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 90%;
+  margin: auto;
+}
+
+thead tr, thead th {
+  text-align: center;
+  width: 10%;
+  padding: 5px 0;
+  border: 1px solid #EEEEEE;
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  background-color: #DDDDDD;
+}
+
+tbody tr, tbody td {
+  text-align: center;
+  width: 10%;
+  height: 100px;
+  padding: 5px 0;
+  border: 1px solid #EEEEEE;
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  background-color: #FFFFEE;
+  font-size: small;
+}
+
+.post_index_image {
+  width: 100%;
+  height: 100%;
+}
+
+.post_index_shop_name {
+  font-size: large;
+  text-decoration: none;
+  color: black;
+}
+
+.post_index_shop_score {
+  color: #FF3333;
+}
+
+.post_index_edit_link {
+  color: #6699FF;
+  font-size: medium;
+}
+
+.post_register_logo, .post_edit_logo, .post_index_logo {
+  width: 5%;
+  height: 5%;
+}
+
+.post_register_title, .post_index_title, .post_edit_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'klee',sans-serif;
+  text-align: center;
+}
+
+.post_register_title h2, .post_index_title h2, .post_edit_title h2 {
+  margin-left: 10px;
+}
+
+.post_register_image, .post_edit_image {
+  font-size: x-small;
+}
+
+.post_register_field li, .post_edit_field li {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  list-style: none;
+  margin-top: 20px;
+}
+
+.post_register_label, .post_edit_label {
+  width: 250px;
+  float: left;
+}
+
+.post_register_field, .post_edit_field {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.post_register_file_field {
+  display: flex;
+}
+
+.post_register_memo_field, .post_edit_memo_field {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post_register_area, .post_edit_area {
+  height: 150px;
+}
+
+.post_register_actions, .post_edit_actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.post_register_button, .post_edit_button {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  font-size: medium;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 2px 10px;
+  background-color: #6699FF;
+  color: white;
+  width: 290px;
+}
+
+.post_index_link {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #EEEEEE;
+  color: black;
+  text-decoration: none;
+  padding: 5px 90px;
+}
+
+.post_show_page {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.post_show_image {
+  width: 95%;
+  height: 370px;
+}
+
+.post_show_nav {
+  border: 1px solid #EEEEEE;
+  text-align: center;
+  margin: auto;
+  padding: 30px 85px;
+}
+
+.post_show_shop_name {
+  font-size: 25px;
+}
+
+.post_show_shop_score {
+  font-size: 20px;
+  color: #FF3333;
+}
+
+.post_show_nav_list {
+  width: 200px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+}
+
+.post_show_nav_list span {
+  border: 1px solid #EEEEEE;
+  padding: 5px;
+  background-color: #DDDDDD;
+}
+
+.posts_back_button {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #EEEEEE;
+  color: black;
+  text-decoration: none;
+  padding: 5px 72px;
+}
+
+/*家系店舗一覧ページ*/
+.map_index_page, .iekei_index_page {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.map_index_logo {
+  width: 5%;
+  height: 5%;
+}
+
+.map_index_title, .iekei_index_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'klee',sans-serif;
+  margin-bottom: 15px;
+}
+
+.map_index_title h3, .iekei_index_title h3 {
+  margin-left: 10px;
+}
+
+.map_index_form {
+  margin-left: 30px;
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+}
+
+.map_index_form input {
+  border-radius: 10px;
+  border-color: #DDDDDD;
+}
+
+#addressInput {
+  width: 250px;
+}
+
+.map_index_range {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#radiusInput {
+  margin-bottom: 15px;
+}
+
+#mapArea {
+  width: 90%;
+  height: 500px;
+  margin: auto;
+}
+
+#results {
+  width: 50%;
+  height: 100px;
+  border: 1px dotted;
+  padding: 10px;
+  overflow-y: scroll;
+  background: #FFFFCC;
+  margin: auto;
+}
+}
+
+/*スマホ*/
+@media screen and (min-width:320px) and ( max-width:767px) {
+  /*ヘッダー・フッター*/
+.header_title {
+  text-decoration: none;
+  font-family: “STKaiti”, “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, serif;
+  font-weight: bold;
+  font-size: 25px;
+  color: white;
+}
+
+.header_logo {
+  margin-left: 10px;
+}
+
+.header_title:hover {
+  color: #FFFFEE;
+}
+
+.header_menu_link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.header_menu_link:hover {
+  color: #CCFFFF;
+}
+
+.header_menu_logo {
+  width: 10%;
+  height: 30%;
+}
+
+#header_right_nav {
+  display: none;
+}
+
+.header_sp_right_nav_container {
+  margin-right: 15px;
+}
+
+#hamburger {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 25px;
+  margin: 0 0 0 auto;
+}
+
+#hamburger span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transform: translateY(-50%);
+}
+
+#hamburger::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+#hamburger::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70%;
+  height: 2px;
+  background-color: #fff;
+}
+
+.header_sp_right_nav {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: block;
+  width: 100%;
+  background: rgba(0, 0, 0, .8);
+  transition: all .2s ease-in-out;
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.header_sp_right_nav ul {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+}
+
+.header_sp_right_nav li {
+  margin: 0;
+  padding: 0;
+}
+
+.header_sp_right_nav li span {
+  font-size: 15px;
+  color: #fff;
+}
+
+.header_sp_right_nav li a, .header_sp_right_nav li span {
+  display: block;
+  padding: 10px 0;
+}
+
+.header_sp_right_nav li a {
+  font-size: large;
+}
+
+.header_sp_right_nav li span {
+  font-size: small;
+}
+
+.header_sp_right_nav .close {
+  position: relative;
+  padding-left: 20px;
+  margin-top: 20px;
+}
+
+.header_sp_right_nav .close::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 16px;
+  height: 1px;
+  background: #fff;
+  transform: rotate( 45deg );
+}
+
+.header_sp_right_nav .close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 16px;
+  height: 1px;
+  background: #fff;
+  transform: rotate( -45deg );
+}
+
+.toggle {
+  transform: translateY( 0 );
+  opacity: 1;
+}
+
+#footer_nav li {
+  font-size: x-small;
+  font-family: 'klee',sans-serif;
+  text-decoration: none;
+  margin-left: 10px;
+  color: #000000;
+}
+
+/*プラポリ・利用規約*/
+.pri_pol_page, .terms_page {
+  margin: 40px 50px;
+  border: 1px solid #DDDDDD;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.over {
+  text-align: right;
+}
+
+/*ホーム画面*/
+.home_page {
+  background-image: url("https://images.unsplash.com/photo-1614563637806-1d0e645e0940?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1073&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 300px;
+  display: flex;
+}
+
+.home_table {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #EEEEEE;
+  width: 45%;
+  height: 130px;
+  padding: 10px 20px;
+  text-align: center;
+  margin: auto;
+}
+
+.home_table_logo {
+  width: 30%;
+  height: 30%;
+}
+
+.home_message {
+  font-family: 'klee',sans-serif;
+  font-size: small;
+}
+
+.home_table_link {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  font-size: x-small;
+  text-decoration: none;
+  color: #FF69A3;
+}
+
+.home_table_search_link {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  font-size: small;
+  text-decoration: none;
+  color: #FF69A3;
+  margin: auto;
+  position: relative;
+  top: 15px;
+}
+
+.home_table_link:hover, .home_table_search_link:hover {
+  color: #FFCC99;
+}
+
+/*新規登録・ログインページ*/
+.sign_up_page, .sign_in_page, .account_edit_page {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.sign_up_logo, .sign_in_logo, .account_edit_logo {
+  width: 10%;
+  height: 10%;
+}
+
+.sign_up_title, .sign_in_title, .account_edit_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'klee',sans-serif;
+  font-size: small;
+  text-align: center;
+}
+
+.sign_up_field li, .sign_in_field li, .account_edit_field li {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  list-style: none;
+  margin-top: 20px;
+  display: block;
+}
+
+.sign_in_label, .sign_up_label, .account_edit_label {
+  width:200px;
+  float: left;
+}
+
+.sign_in_field, .sign_up_field, .account_edit_field {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.sign_up_actions, .sign_in_actions, .account_edit_actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.sign_up_button, .sign_in_button, .account_edit_button {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  font-size: medium;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 2px 10px;
+  background-color: #6699FF;
+  color: white;
+  width: 230px;
+}
+
+.sign_in_link, .sign_up_link {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #EEEEEE;
+  color: black;
+  text-decoration: none;
+}
+
+.sign_in_link {
+  font-size: small;
+}
+
+.sign_up_link {
+  padding: 5px 75px;
+}
+
+/*アカウント編集ページ*/
+.back_button {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #EEEEEE;
+  color: black;
+  text-decoration: none;
+  padding: 5px 100px;
+}
+
+/*ポストページ*/
+.post_index_page, .post_register_page, .post_edit_page {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.post_index_logo, .post_register_logo, .post_edit_logo {
+  width: 15%;
+  height: 10%;
+}
+
+.post_register_title, .post_index_title, .post_edit_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'klee',sans-serif;
+  font-size: small;
+  text-align: center;
+}
+
+.post_index_table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin: auto;
+}
+
+thead tr, thead th {
+  text-align: center;
+  width: 10%;
+  padding: 5px 0;
+  border: 1px solid #EEEEEE;
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  font-size: small;
+  background-color: #DDDDDD;
+}
+
+tbody tr, tbody td {
+  text-align: center;
+  width: 10%;
+  height: 100px;
+  padding: 5px 0;
+  border: 1px solid #EEEEEE;
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  background-color: #FFFFEE;
+  font-size: x-small;
+}
+
+.post_index_shop_score {
+  color: #FF3333;
+}
+
+.post_index_image {
+  width: 100%;
+  height: 100%;
+}
+
+.post_index_shop_name {
+  font-size: small;
+  text-decoration: none;
+  color: black;
+}
+
+.post_index_edit_link {
+  color: #6699FF;
+  font-size: x-small;
+}
+
+.post_register_title h2, .post_index_title h2, .post_edit_title h2 {
+  margin-left: 10px;
+}
+
+.post_register_image, .post_edit_image {
+  font-size: x-small;
+}
+
+.post_register_field li, .post_edit_field li {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  list-style: none;
+  margin-top: 20px;
+  display: block;
+}
+
+.post_register_label, .post_edit_label {
+  width: 200px;
+  float: left;
+}
+
+.post_register_field, .post_edit_field {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.post_register_memo_field, .post_edit_memo_field {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post_register_area, .post_edit_area {
+  height: 150px;
+  width: 200px;
+}
+
+.post_register_actions, .post_edit_actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.post_register_button, .post_edit_button {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  font-size: medium;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 2px 10px;
+  background-color: #6699FF;
+  color: white;
+  width: 230px;
+}
+
+.post_index_link {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #EEEEEE;
+  color: black;
+  text-decoration: none;
+  padding: 5px 60px;
+}
+
+.post_show_page {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.post_show_image_container {
+  text-align: center;
+}
+
+.post_show_image {
+  width: 80%;
+}
+
+.post_show_nav {
+  border: 1px solid #EEEEEE;
+  text-align: center;
+  width: 80%;
+  margin: 10px auto;
+  padding: 20px 50px;
+}
+
+.post_show_shop_name {
+  font-size: large;
+}
+
+.post_show_shop_score {
+  font-size: small;
+  color: #FF3333;
+}
+
+.post_show_nav_list {
+  margin-top: 10px;
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  font-size: small;
+}
+
+.post_show_nav_list span {
+  border: 1px solid #EEEEEE;
+  padding: 5px;
+  background-color: #DDDDDD;
+}
+
+.posts_back_button {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #EEEEEE;
+  color: black;
+  text-decoration: none;
+  padding: 5px 45px;
+}
+
+/*家系店舗一覧ページ*/
+.map_index_page, .iekei_index_page {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.map_index_logo {
+  width: 30px;
+  height: 30px;
+}
+
+.map_index_title, .iekei_index_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'klee',sans-serif;
+  margin-bottom: 20px;
+}
+
+.map_index_title h3, .iekei_index_title h3 {
+  margin-left: 10px;
+}
+
+.map_index_form {
+  text-align: center;
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+}
+
+.map_index_form input {
+  border-radius: 10px;
+  border-color: #DDDDDD;
+  margin-bottom: 10px;
+}
+
+#addressInput {
+  width: 250px;
+}
+
+.map_index_range {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+#radiusInput {
+  margin-bottom: 10px;
+}
+
+#mapArea {
+  width: 90%;
+  height: 500px;
+  margin: auto;
+}
+
+#results {
+  width: 50%;
+  height: 100px;
+  border: 1px dotted;
+  padding: 10px;
+  overflow-y: scroll;
+  background: #FFFFCC;
+  margin: auto;
+}
 }
