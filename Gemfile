@@ -32,12 +32,33 @@ gem 'uglifier'
 gem 'jquery-rails'
 gem 'bootstrap'
 gem 'rails-i18n'
-gem 'pry-rails'
-gem 'rspec-rails'
+gem 'ransack'
+gem 'carrierwave', '~> 2.0'
+gem 'mini_magick'
+gem 'kaminari'
+gem 'net-smtp'
+gem 'net-imap'
+gem 'net-pop'
+
+#scraping
+gem 'nokogiri'
+gem 'anemone'
+gem 'mechanize'
+gem 'open-uri'
+gem 'open_uri_redirections'
+gem 'csv'
+gem 'activerecord-import'
+
+#Google API
+gem 'dotenv-rails'
+gem 'google_places'
+gem 'geocoder'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-rails'
+  gem 'rspec-rails'
 end
 
 group :development do
